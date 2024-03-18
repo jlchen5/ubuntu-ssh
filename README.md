@@ -10,14 +10,14 @@ A non-root user with sudo privileges
 ```bash
 sudo apt update
 sudo apt install openssh-server
-Check the status of the SSH service:
 ```
+
+Check the status of the SSH service:
 ```bash
 sudo systemctl status ssh
 ```
 - Step 2: Configure SSH (Optional)
 Edit the SSH configuration file:
-
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
@@ -40,6 +40,9 @@ Replace your_username and server_ip_address with your actual username and server
 - Step 4: Additional Security (Optional)
 Set up SSH keys for a passwordless login.
 Configure firewalls and fail2ban to enhance security.
+```bash
+sudo ufw allow ssh
+```
 
 ## Conclusion
 This guide covers the basics of setting up SSH on Ubuntu. Adjust settings according to your security needs and environment.
